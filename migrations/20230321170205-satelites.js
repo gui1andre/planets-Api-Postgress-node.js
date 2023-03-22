@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-   up: async (queryInterface, Sequelize) =>{
+  up: async (queryInterface, Sequelize) => {
     /**
      * Add altering commands here.
      *
@@ -20,13 +20,13 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      serial_numer: {
+      serial_nubmer: {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
       planetId: {
         type: Sequelize.INTEGER,
-        references: {model: 'planets', key: 'id'},
+        references: { model: 'planets', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
@@ -39,7 +39,7 @@ module.exports = {
     });
   },
 
- down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface, Sequelize) => {
     /**
      * Add reverting commands here.
      *

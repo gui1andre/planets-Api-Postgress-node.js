@@ -1,8 +1,8 @@
 const Planet = require('../models/planets');
 const Satelite = require('../models/satelite');
 
-Planet.hasOne(Satelite, {onDelete: 'CASCADE', onUpdate: 'CASCADE'});
-Satelite.belongsTo(Planet,{foreingKey: 'planetId', as: 'planet'} );
+Planet.hasOne(Satelite, { onDelete: 'CASCADE', onUpdate: 'CASCADE' });
+Satelite.belongsTo(Planet, { foreingKey: 'planetId', as: 'planet' });
 
 
-module.exports = {Satelite, Planet};
+module.exports = { Satelite, Planet };
